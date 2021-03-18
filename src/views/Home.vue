@@ -7,7 +7,7 @@
     </ion-header>
 
     <ion-content :fullscreen="true" class="ion-padding">
-      <login-form @createAccount="doCreateAccount" @login="doLogin" />
+      <create-account-form @createAccount="doCreateAccount" />
     </ion-content>
   </ion-page>
 </template>
@@ -21,7 +21,7 @@ import {
   IonToolbar
 } from "@ionic/vue";
 import { defineComponent } from "vue";
-import LoginForm from "./LoginForm.vue";
+import CreateAccountForm from "./CreateAccountForm.vue";
 
 export default defineComponent({
   name: "Home",
@@ -31,14 +31,10 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
-    LoginForm
+    CreateAccountForm
   },
   setup() {
     return {
-      doLogin: (params: any) => {
-        alert("Login With  " + params.email + " " + params.password);
-        console.log("doLogin", params);
-      },
       doCreateAccount: (params: any) => {
         console.log("doCreateAccount", params);
       }
