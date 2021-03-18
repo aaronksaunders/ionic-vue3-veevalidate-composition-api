@@ -56,7 +56,7 @@ export default defineComponent({
     const { value: password } = useField("credentials.password");
 
     return {
-      errors: useFormErrors(),
+      errors: useFormErrors() as any,
       email,
       password
     };
@@ -69,5 +69,8 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+ion-item {
+  --padding-start: 0
+}
 </style>

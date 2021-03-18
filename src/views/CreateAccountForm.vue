@@ -13,7 +13,7 @@
       ><ion-card-title>Personal Information</ion-card-title></ion-card-header
     >
     <ion-card-content>
-      <name-component />
+      <personal-info-component />
     </ion-card-content>
   </ion-card>
   <ion-button @click="handleCreateAccount">CREATE ACCOUNT</ion-button>
@@ -25,12 +25,14 @@ import {
   IonCard,
   IonCardContent,
   IonCardHeader,
-  IonCardTitle,
+  IonCardTitle
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 
 import { useForm } from "vee-validate";
-import NameComponent, { nameComponentSchema } from "./NameComponent.vue";
+import PersonalInfoComponent, {
+  personalInfoComponentSchema
+} from "./PersonalInfoComponent.vue";
 import CredentialsComponent, {
   credentialsComponentSchema
 } from "./CredentialsComponent.vue";
@@ -41,14 +43,22 @@ export default defineComponent({
   setup(props, { emit }) {
     // Create a form context with the validation schema
     const theForm = useForm({
-      validationSchema: nameComponentSchema.concat(credentialsComponentSchema)
+      validationSchema: personalInfoComponentSchema.concat(
+        credentialsComponentSchema
+      )
     });
 
     return {
       handleCreateAccount: async () => {
         const resp = await theForm.validate();
         if (resp.valid) {
-          emit("createAccount", theForm.values);
+
+          // need to unwrap the references to get a plain json object
+          const { personalInfo, credentials } = theForm.values;
+          emit("createAccount", {
+            personalInfo: { ...personalInfo },
+            credentials: { ...credentials }
+          });
         }
       }
     };
@@ -60,7 +70,7 @@ export default defineComponent({
     IonCardHeader,
     IonCardTitle,
     CredentialsComponent,
-    NameComponent
+    PersonalInfoComponent
   }
 });
 </script>
