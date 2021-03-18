@@ -14,7 +14,11 @@
 
     <ion-item>
       <ion-label>Birthday</ion-label>
-      <ion-datetime name="personalInfo.birthday" v-model="birthday"  display-format="MM/DD/YYYY"/>
+      <ion-datetime
+        name="personalInfo.birthday"
+        v-model="birthday"
+        display-format="MM/DD/YYYY"
+      />
     </ion-item>
     <p>{{ errors["personalInfo.birthday"] }}</p>
   </div>
@@ -60,6 +64,6 @@ export default {
 </script>
 <style lang="css" scoped>
 ion-item {
-  --padding-start: 0
+  --padding-start: 0;
 }
 </style>
