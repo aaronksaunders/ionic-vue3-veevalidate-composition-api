@@ -1,25 +1,17 @@
-# ionic-vue3-storybook-1
+# ionic-vue3-storybook-2
 
-<p align="center">
-  <img src="Learn to Build Mobile Apps With Ionic Framework, VUEJS, and Capacitor (27).png"  height="350" /><br />
-</p>
-<br/>
+working wth forms and then again forms with many different sections and then you add in validation and testing and it can be come a nightmare. Following up on the previous video i did on Ionic Vue JS and Storybook, I have a new tutorial showing a way to manage a large form implementation and using Storybook to make it easier for you
 
-VIDEO - https://youtu.be/AMzanfFB0BM
+VIDEO - https://www.youtube.com/watch?v=2ET7IH57XwQ
 
-How To Use Storybook with Ionic and VueJS
-#ionic #vuejs #storybook
 
-Intro video for configuring vuejs storybook and ionic framework. 
-
-We will create a story for a LoginForm component with two input fields that emits events for login and create account
 
 
 💥 Links
 -----------------------------------
-- Storybook - https://storybook.js.org/docs/vue/get-started/introduction
+
 - ionic Vue - https://ionicframework.com/docs/vue/overview
-- Video - https://youtu.be/AMzanfFB0BM
+
 
 
 💥 Additional Content
