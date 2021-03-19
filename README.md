@@ -12,7 +12,7 @@ VIDEO - https://www.youtube.com/watch?v=2ET7IH57XwQ
 -----------------------------------
 - Vee Validate - https://vee-validate.logaretm.com/v4/guide/composition-api/validation
 - ionic Vue - https://ionicframework.com/docs/vue/overview
-- Source Code - https://github.com/aaronksaunders/ionic-vue3-storybook-2
+- Source Code - https://github.com/aaronksaunders/ionic-vue3-veevalidate-composition-api
 - Vue Vee Validate Playlist - https://buff.ly/30U15iV
 
 
